@@ -6,14 +6,9 @@ resource "aws_instance" "web" {
   subnet_id     = local.pub_sub_ids[0]
   associate_public_ip_address = true
   vpc_security_group_ids = [ aws_security_group.web_sg.id]
-  user_data = <<EOF
-    #!/bin/bash
-    yum install httpd -y
-    echo "<h2> Webapp is Running </h2>" > /var/www/html/index.html
-    service httpd start
-    chkconfig httpd on
-    EOF
-
+  user_data = file("scripts/apache.sh")
+  # Attach profile to instance
+  iam_instance_profile = aws_iam_instance_profile.instance_profile.name
   tags = {
     Name = "Webapp"
   }

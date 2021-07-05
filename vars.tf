@@ -16,7 +16,7 @@ variable "region" {
 
 # Declare a variable for Instance type
 variable "web_instance_type" {
-  default = "t2-micro"
+  default = "t2.micro"
   type    = string
 
 }
@@ -31,5 +31,9 @@ variable "web_ami" {
 
 }
 
+variable "web_s3" {
+  default = "kubernetes.bucket-dev"
+  
+}
 
 
