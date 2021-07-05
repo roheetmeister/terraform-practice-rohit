@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    tools {
+    terraform 'terraform'
+    }
+    stages{
+        stage('Git checkOut'){
+            steps{
+                git credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/roheetmeister/terraform-practice-rohit.git'
+            }
+        }
+        stage('Terraform Init'){
+            steps{
+                sh 'terraform init'
+                
+            }
+        }
+        stage('Terraform Apply'){
+            steps{
+                sh 'terraform apply --auto-approve -var-file=dev.tfvars'
+                
+            }
+        }
+    }
+}
