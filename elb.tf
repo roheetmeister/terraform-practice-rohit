@@ -1,8 +1,8 @@
 # Create a new load balancer
 resource "aws_elb" "web-elb" {
-  name               = "web-elb"
-  subnets = local.pub_sub_ids
-  security_groups = [ aws_security_group.web_sg.id ]
+  name            = "web-elb"
+  subnets         = local.pub_sub_ids
+  security_groups = [aws_security_group.web_sg.id]
 
   listener {
     instance_port     = 80
