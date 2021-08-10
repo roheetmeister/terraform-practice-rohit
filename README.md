@@ -1,9 +1,7 @@
-# terraform-practice-rohit
-
 :::: Setup Terrafomrm for AWS infrasturcture as a code (Iac) ::::
+------------------------------------------------------------------
 
 Using below AWS resources:
---------------------------
 
 a. EC2 instance with apache running 
 
