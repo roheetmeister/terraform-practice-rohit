@@ -1,4 +1,4 @@
-:::: Setup Terrafomrm for AWS infrasturcture as a code (Iac) ::::
+:::: Setup Terraform for AWS infrasturcture as a code (Iac) ::::
 ------------------------------------------------------------------
 
 Using below AWS resources:
