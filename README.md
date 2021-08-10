@@ -1,6 +1,9 @@
 # terraform-practice-rohit
+
 Setup Terrafomrm for AWS infrasturcture as a code (Iaac)
+
 Using below AWS resources:
+
 a. EC2 instance with apache running 
 b. Creating IAM 
 c. Creating Security Group
