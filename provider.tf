@@ -1,10 +1,11 @@
 # Declare name of provider..!!
+
 provider "aws" {
   region = var.region
 
 }
 
-# Keeping tfstate remotely as backen service AWS S3
+# Keeping tfstate remotely as backend service AWS S3
 
 terraform {
   backend "s3" {
