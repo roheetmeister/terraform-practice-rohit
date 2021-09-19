@@ -12,8 +12,7 @@ resource "aws_vpc" "main" {
 }
 
 
-# Create a Pulic Subnets equal to number of az's
-
+# Create a Pulic Subnets equal to number of az's available with the help of count meta-argument
 resource "aws_subnet" "public" {
   count  = length(local.az_names)
   vpc_id = aws_vpc.main.id
